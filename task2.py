@@ -1,9 +1,10 @@
 import unittest
 from weather import Weather
 weather=Weather()
-a=input("enter a location")
-location = weather.lookup_by_location(a)
+location = weather.lookup_by_location("Halifax")
 condition = location.condition()
+temp=condition.get('temp')
+forecast=location.forecast()
 print (condition['text'])
 
 # Get weather forecasts for the upcoming days.
