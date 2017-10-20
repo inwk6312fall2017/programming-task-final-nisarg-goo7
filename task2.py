@@ -13,3 +13,13 @@ for i in forecasts:
 			print('Day with max tep in next 5 days is %s '% (i['date']))
 			print('higest temprature is %s'%(i['high']))
 			break
+
+for i in forecasts:
+		low=i['low']
+		temp.append(int(low))
+		if int(i['low'])==min(temp):
+			print('lowest temprature is %s'%(i['low']))
+			break
+		elif i['text']=='rain':
+			print('rainy day is %s'%(i['date']))
+
